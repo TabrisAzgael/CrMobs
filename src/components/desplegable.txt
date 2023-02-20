@@ -1,0 +1,36 @@
+import React, { useState } from 'react';
+
+function Desplegable() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeDropdown = (event) => {
+    if (event.target.closest('.dropdown') === null) {
+      setIsOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    document.addEventListener('click', closeDropdown);
+    return () => {
+      document.removeEventListener('click', closeDropdown);
+    };
+  });
+
+  return (
+    <div className="dropdown">
+      <button onClick={toggleDropdown}>Open/Close Dropdown</button>
+      {isOpen && (
+        <ul>
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+        </ul>
+      )}
+    </div>
+  );
+}
+export default Desplegable;
