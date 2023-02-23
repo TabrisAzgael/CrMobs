@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const LI = styled.li`
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;

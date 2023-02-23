@@ -1,19 +1,20 @@
 import Expl from './components/expl';
 import Navbar from './components/navbar';
 
-const style = {
+const Style = {
   fondo: {
     backgroundColor: '#01000f',
     height:'100vh',
     margin:'-8px',
-    padding: '15px',
+    display: 'flex',
+    flexDirection: 'column',
   },
 }
 
 
 function App() {
   return (
-    <div className="App" style={style.fondo}>
+    <div className="App" style={Style.fondo}>
       <Navbar />
       <Expl />
     </div>

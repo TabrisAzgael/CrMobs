@@ -1,19 +1,17 @@
 import { Component } from "react";
 
-const style = {
-    cuadro: {
-
-    }
-}
-
-class Expl extends Component {
-    render() {
-        return(
-            <div styles={style.cuadro} >
-                lalala
-            </div>
+const Style = {
+    color: '#000',
+    backgroundColor: 'white',
+    paddingTop: '60px'
+};
+  
+  function Expl() {
+    return (
+        <div style={Style}>
+                ALKSFJDLASFDLKNASFDLKNASFDLNSLFÑNSAFDLKN
+        </div>
         )
-    }
 }
 
 export default Expl;
